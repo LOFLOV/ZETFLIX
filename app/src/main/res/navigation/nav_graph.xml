@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.zetflix.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.android.zetflix.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/ratingsFragment"
+        android:name="com.android.zetflix.RatingsFragment"
+        android:label="RatingsFragment" >
+        <action
+            android:id="@+id/action_ratingsFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+</navigation>
